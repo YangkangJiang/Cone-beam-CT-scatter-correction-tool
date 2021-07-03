@@ -22,7 +22,8 @@ Display: show the uncorrected projection after the input path selected and the c
 Result: show the task, device and calculation time of the software.       
 
 
-Quick Start   
+Quick Start  
+Unzip the latest_net_G.zip in resource.
 After starting the software and entering the basic setting, there are two options:  
 1.	To process a single projection, click ‘Load Image’, select the projection path, and then select the save path. Finally, click ‘Infer Model’ to start processing. 
 This process will not start the reconstruction process. 
