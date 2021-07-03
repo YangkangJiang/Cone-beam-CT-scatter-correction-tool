@@ -1,0 +1,41 @@
+# >>>> INPUT FILE FOR gFDK >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  gFDK v.1.0 : half-fan geometry, FFT for ramp filtering
+    
+
+#[SECTION GPU CONFIG v.2013-06-07]
+0                               # GPU NUMBER TO USE 
+512                              # GPU THREADS PER CUDA BLOCK (multiple of 32)
+32768                           # the leading dimension of the 2d thread grid
+
+#[SECTION SOURCE v.2013-06-07]
+0.0 0.0 0.0                # SOURCE OFFSET: X Y Z [mm] (optional)
+
+#[SECTION DETECTOR v.2013-06-07]
+1024  768               # NUMBER OF PIXELS IN THE IMAGER: NI_XY NI_Z
+0.388 0.388                   # PIXEL SIZE ON THE IMAGER (width, height): PIXSIZE_XY PIXSIZE_Z [mm]
+1500.0                           # SOURCE-TO-DETECTOR DISTANCE: SID [mm]
+1000.0                          # SOURCE-TO-AXIS DISTANCE: SAD [mm]
+148.0			# SHIFTED DETECTOR DISTANCE: CRD_Y [mm] (optional)
+1				# PROJECTION OR LINE INTEGRAL: 1--PROJECTION; 0--LINE INTEGRAL
+2				#  0 -- PWLS off;1 -- PWLS GS iteration; 2 -- PWLS FISTA iteration (recommended). Note: on windows it should be always off.
+1				# PROJECTION FLIP: 1 -- fliped; 0 -- no change
+D:\jyk\412986\proj_corr\Proj_%05d.raw                # PROJECTION IMAGE FILES
+D:\jyk\I0_pelvis_trilogy_xiasha.raw		#FLAT FIELD INTENSITY
+
+
+#[SECTION CT SCAN v.2013-06-07]
+0	   1			# ASCENDING OF PROJECTION NUMBER: FILEINI FILEINC
+16				# BATCH NUMBER: NPROJ_BATCH                       
+512	168			# VOXEL NUMBER OF CT IMAGE: NP_XY, NP_Z
+0.8		    1.0		# VOXEL SIZE OF CT: VOXSIZE_XY VOXSIZE_Z [mm]
+1				# CROP FREQUENCY FOR RAMP FILTER, NORMALIZED
+D:\jyk\412986\angle_FDK.log		# ANGULAR FILE
+D:\jyk\412986\CBCT_recon_corr.raw   #output
+
+#[SECTION SECTION DENOISE v.2013-06-07]	
+8e2	   2e-6	        # HORIZONTAL AND VERTICAL WEIGHT in GS iterration (PWLS = 1); delta and iteration step in FISTA iteration (PWLS = 2)
+1.0e-6     0.12			# stopping metric to terminate the GS itertion; controls the strength of edge preservation
+70				# define the maximum number of itertions in GS iteration
+
+# >>>> END INPUT FILE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
