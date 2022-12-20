@@ -33,6 +33,7 @@ References
 Yangkang Jiang, Chen Luo, Pengfei Yang, Jing Wang, Wei Zhao and Tianye Niu*, " A generalized image quality improvement strategy of cone-beam CT using multiple spectral CT labels in Pix2pix GAN."  
 
 Requirement    
+Torch may need to be installed or you can move the missing dll files to the directory of the exe file.
 Scatter correction: can be run on CPU and GPU. If using GPU, CUDA and CUDNN are required to be installed.   
 Scatter correction and reconstruction: can only be run on GPU. CUDA and CUDNN are required to be installed.   
 
