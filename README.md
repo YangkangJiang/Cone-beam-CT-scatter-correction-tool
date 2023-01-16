@@ -37,9 +37,13 @@ Torch may need to be installed or you can move the missing dll files to the dire
 Scatter correction: can be run on CPU and GPU. If using GPU, CUDA and CUDNN are required to be installed.   
 Scatter correction and reconstruction: can only be run on GPU. CUDA and CUDNN are required to be installed.   
 
+If there is an error when you run the program and it shows that the dll file is missing, please download the file in the link below and put it in the path where the exe file is located before testing. 
+Link：https://pan.baidu.com/s/1K09hMmyC5PXgQVeqZ54-DA?pwd=1234 
+Extraction code：1234
+
 Contact   
 If you have any questions or suggestions about this software, please contact us:    
-Dr. Tianye Niu: tyniu@gatech.edu    
+Dr. Tianye Niu: niuty@szbl.ac.cn   
 Mr. Yangkang Jiang 11718077@zju.edu.cn    
 
 
